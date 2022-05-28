@@ -1,0 +1,215 @@
+LIST METHODS
+
+# insert()
+
+s=["jai","shri","ram","jai"]
+
+s.insert(4,"hanuman")
+
+print(s)
+
+s=["jai","shri","ram","jai"]
+
+s.append("jai")
+
+print(s)
+
+['jai', 'shri', 'ram', 'jai', 'jai']
+
+2# pop
+
+​
+
+s=["jai","shri","ram","jai"]
+
+s.pop()
+
+print(s)
+
+['jai', 'shri', 'ram']
+
+3.# reverse()
+
+s=["jai","shri","ram","jai"]
+
+s.reverse()
+
+print(s)
+
+['jai', 'ram', 'shri', 'jai']
+
+4.# count()
+
+s=["jai","shri","ram","jai"]
+
+s1=s.count("jai")
+
+print(s1)
+
+2
+
+# 5.copy()
+
+s=["jai","shri","ram","jai"]
+
+s1=s.copy()
+
+print(s1)
+
+['jai', 'shri', 'ram', 'jai']
+
+# 6.extend()
+
+s=["jai","shri","ram","jai"]
+
+s1=["jai","shri","ram","jai"]
+
+print(s.extend(s1))
+
+s+s1
+
+​
+
+None
+
+['jai',
+ 'shri',
+ 'ram',
+ 'jai',
+ 'jai',
+ 'shri',
+ 'ram',
+ 'jai',
+ 'jai',
+ 'shri',
+ 'ram',
+ 'jai']
+
+# 7.sort()
+
+s=["jai","shri","ram","jai"]
+
+s.sort()
+
+print(s)
+
+['jai', 'jai', 'ram', 'shri']
+
+# 8.remove()
+
+s=["jai","shri","ram","jai"]
+
+s.remove("jai")
+
+print(s)
+
+['shri', 'ram', 'jai']
+
+# 9.clear()
+
+s=["jai","shri","ram","jai"]
+
+s.clear()
+
+print(s)
+
+[]
+
+s.inert()
+
+s.append()
+
+s.pop()
+
+s.reverse()
+
+s.count()
+
+s.copy()
+
+s.extend()
+
+s.sort()
+
+s.remove()
+
+s.clear()
+
+s=["sriram","jai","ram","jai","jai","ram"]
+
+s2=["hanuman"]
+
+s.insert(2,"dasharth")
+
+print(s)
+
+print('*'*35)
+
+s.append("sita")
+
+print(s)
+
+print('*'*35)
+
+s.pop()
+
+print(s)
+
+print('*'*35)
+
+s.reverse()
+
+print(s)
+
+print('*'*35)
+
+s.count("jai")
+
+print(s)
+
+print('*'*35)
+
+s1=s.copy()
+
+print(s1+s2)
+
+print('*'*35)
+
+s.sort()
+
+print(s)
+
+print('*'*35)
+
+s.remove("ram")
+
+print(s)
+
+print('*'*35)
+
+s.clear()
+
+print(s)
+
+print('*'*35)
+
+​
+
+['sriram', 'jai', 'dasharth', 'ram', 'jai', 'jai', 'ram']
+***********************************
+['sriram', 'jai', 'dasharth', 'ram', 'jai', 'jai', 'ram', 'sita']
+***********************************
+['sriram', 'jai', 'dasharth', 'ram', 'jai', 'jai', 'ram']
+***********************************
+['ram', 'jai', 'jai', 'ram', 'dasharth', 'jai', 'sriram']
+***********************************
+['ram', 'jai', 'jai', 'ram', 'dasharth', 'jai', 'sriram']
+***********************************
+['ram', 'jai', 'jai', 'ram', 'dasharth', 'jai', 'sriram', 'hanuman']
+***********************************
+['dasharth', 'jai', 'jai', 'jai', 'ram', 'ram', 'sriram']
+***********************************
+['dasharth', 'jai', 'jai', 'jai', 'ram', 'sriram']
+***********************************
+[]
+***********************************
