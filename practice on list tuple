@@ -1,0 +1,527 @@
+# 1. Write a Python program to sort a list of tuples using Lambda.
+l=[('math',99),('pysics',89),('chemistry',92)]
+print(l)
+l.sort(key=lambda x:x[1] )
+print(l)
+
+[('math', 99), ('pysics', 89), ('chemistry', 92)]
+[('pysics', 89), ('chemistry', 92), ('math', 99)]
+
+# 2. Write a Python program to sort a list of dictionaries using Lambda
+l=[{'sub':'math','marks':99},{'sub':'pysics','marks':89},{'sub':'chemistry','marks':92}]
+
+l.sort(key=lambda x:x['marks'] )
+print(l)
+
+s=sorted(l,key=lambda x : x['marks'])
+print(s)
+
+[{'sub': 'pysics', 'marks': 89}, {'sub': 'chemistry', 'marks': 92}, {'sub': 'math', 'marks': 99}]
+[{'sub': 'pysics', 'marks': 89}, {'sub': 'chemistry', 'marks': 92}, {'sub': 'math', 'marks': 99}]
+
+# 3. Write a Python program to find square and cube every number in a given list of
+# integers using Lambda
+
+
+l=[12,23,4,5,65]
+sq_list=lambda x :[x*x for x in l]
+print( 'square list', sq_list(l))
+# s= lambda  list1 : [i*i for i in list1]
+l=[12,23,4,5,65]
+cube_list=lambda x :[x**3 for x in l]
+print('cube list', cube_list(l))
+
+square list [144, 529, 16, 25, 4225]
+cube list [1728, 12167, 64, 125, 274625]
+
+#  4. Write a Python program to find if a given string starts with a given character using
+# Lambda
+
+s='chetak m deore'
+s1=(lambda x:x.startswith('che'))
+s1(s)
+
+True
+
+# 5. Write a Python program to check whether a given string is number or not using
+# Lambda
+
+s='chetak m deore'
+for i in s:
+    if i==i.isdigit():
+        print('yes its have atleast 1 digit')
+        
+else:
+    print('its a string')
+
+its a string
+
+# 6. Write a Pydef fibo()thon program to create Fibonacci series using Lambda
+def fibo(n):
+    first=0
+    second=1
+    print(f'{first},{second}',end=' ')
+    for i in range(n-2):
+        new=first+second
+        first=second
+        second=new
+        print(new,end= ' ')
+fibo(10)    
+
+0,1 1 2 3 5 8 13 21 34 
+
+def fibonacci(n): # 2
+    if n <= 1: # false
+        return n
+    else:
+        
+        return (fibonacci(n-2) + fibonacci(n-1))  ## 2-2 + 2-1
+    
+    
+# print("fibo Series:",end="")
+for i in range(11):
+    print(fibonacci(i),end=" ") 
+
+0 1 1 2 3 5 8 13 21 34 55 
+
+# 7. Write a Python program to find the intersection of two given arrays using Lambda
+l=[1,2,3,42]
+l1=[1,2,3]
+s=list(filter(lambda i:i in l,l1))
+print(s)
+
+[1, 2, 3]
+
+l=[1,2,3,42]
+l1=[1,2,3]
+a=set(l)
+b=set(l1)
+a.intersection(b)
+
+{1, 2, 3}
+
+# 8. Write a Python program to rearrange positive and negative numbers in a given array
+# using Lambda
+
+s={1,34,5,2,-2,4,5,-78,-4}
+s1=lambda x:sorted(x)
+s1(s)
+
+[-78, -4, -2, 1, 2, 4, 5, 34]
+
+# 9. Write a Python program to count the even, odd numbers in a given array of integers
+# using Lambda
+s1=[12,2,3,5,6,7,86,44,35]
+s2 = list(filter(lambda x: x%2==0,s1))
+print(s2)
+s2=list(filter(lambda x: x%2!=0,s1))
+print(s2)
+
+[12, 2, 6, 86, 44]
+[3, 5, 7, 35]
+
+# 10. Write a Python program to add two given lists using map and lambda
+l=[12,2,3,4,5,54]
+l1=[123,44,5,566,5543,1]
+s=list(map(lambda x,y: x+y,l,l1))
+print(s)
+
+[135, 46, 8, 570, 5548, 55]
+
+# 11. Write a Python program to find numbers divisible by nineteen or thirteen from a list of
+# numbers using Lambda
+l=[12,39,52,65,108,2,38,57,95,190]
+s1=list(filter(lambda x:x%13==0,l))
+print('no in 13 table >>>',s1)
+print('*'*25)
+s2=list(filter(lambda x:x%19==0,l))
+print('no in 19 table >>>',s2)
+
+no in 13 table >>> [39, 52, 65]
+*************************
+no in 19 table >>> [38, 57, 95, 190]
+
+# 12. Write a Python program to find palindromes in a given list of strings using Lambda
+s=['qwdw','sas','rer','s','fef' ]
+s1=list(filter(lambda x:(x==''.join(reversed(x))),s))
+print(s1)
+
+['sas', 'rer', 's', 'fef']
+
+#  13. Write a Python program to find all anagrams of a string in a given list of strings using
+# lambda
+from collections import Counter  
+texts = ["bcda", "abce", "cbda", "cbea", "adcb"]
+print(texts) 
+result = list(filter(lambda x: (Counter(str) == Counter(x)), texts)) 
+print(result)
+
+['bcda', 'abce', 'cbda', 'cbea', 'adcb']
+['bcda', 'cbda', 'adcb']
+
+# 14. Write a Python program that multiplies each number of a given list with a given
+# number using lambda function. Print the result
+s=[12,3,45,5]
+s1=list(map(lambda x:x*3,s))
+print(s1)
+
+[36, 9, 135, 15]
+
+# 15. Write a Python program to calculate the sum of the positive and negative numbers of
+# a given list of numbers using lambda function
+s=[12,2,3,2,11,-2,-34,-5,-32]
+s1=list(filter(lambda x:x>1,s))
+print(s1)
+print('sum of all +ve no is',sum(s1))
+print('*'*50)
+s2=list(filter(lambda x:x<1,s))
+print(s2)
+print('sum of all -ve no is',sum(s2))
+
+[12, 2, 3, 2, 11]
+sum of all +ve no is 30
+**************************************************
+[-2, -34, -5, -32]
+sum of all -ve no is -73
+
+# 16. Write a Python program to find the list with maximum and minimum length using
+# lambda
+s=['chetak','madansing','deore','pm']
+print(max(s))
+print(min(s))
+
+pm
+chetak
+
+# 17. Write a Python program to check whether a specified list is sorted or not using
+# lambda
+s=[1,2,32,1,3]
+for i in s:
+    if s==sorted(s):
+        print('yes its sorted')
+    else:
+        print('no,its not sorted')
+
+no,its not sorted
+no,its not sorted
+no,its not sorted
+no,its not sorted
+no,its not sorted
+
+# 18. Write a Python program to remove all elements from a given list present in another
+# list using lambda.
+s=[12,3,4,5,67]
+s1=[12,2,3,4,52,1]
+s2=list(filter(lambda i : i not in s1,s))
+s2
+
+[5, 67]
+
+a=[12,2,3,4]
+b=[21,3,43,2]
+a and b
+
+[21, 3, 43, 2]
+
+# 19. Write a Python program to convert string element to integer inside a given tuple using lambda
+
+def tuple_int_str(tuple_str):
+    result = tuple(map(lambda x: (int(x[0]), int(x[2])), tuple_str))
+    return result     
+tuple_str =  (('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34'))
+print("Original tuple values:")
+print(tuple_str)
+print("\nNew tuple values:")
+print(tuple_int_str(tuple_str))
+
+Original tuple values:
+(('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34'))
+
+New tuple values:
+((233, 33), (1416, 55), (2345, 34))
+
+tuple_str =  (('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34')
+result = tuple(map(lambda x: (int(x[0]), int(x[2])), tuple_str))
+
+print(tuple_str)
+
+print(result)
+
+(('233', 'ABCD', '33'), ('1416', 'EFGH', '55'), ('2345', 'WERT', '34'))
+((233, 33), (1416, 55), (2345, 34))
+
+# 20. Write a Python program to count the occurrences of the items in a given list using
+# lambda
+s=[12,3,2,3,4,12,2,6,7]
+s1=set(s)
+for i in s1:
+    print(i,s.count(i))
+
+2 2
+3 2
+4 1
+6 1
+7 1
+12 2
+
+s = [3,4,5,8,0,3,8,5,0,3,1,5,2,3,4,2]
+result = list(map(lambda x  : (x,s.count(x)),s))
+
+print(s)
+print(set(result))
+
+[3, 4, 5, 8, 0, 3, 8, 5, 0, 3, 1, 5, 2, 3, 4, 2]
+{(3, 4), (1, 1), (4, 2), (0, 2), (2, 2), (5, 3), (8, 2)}
+
+# 21. Write a Python program to add three given lists using Python map and lambda
+s=[12,3,4,5]
+s1=[32,54,2,1]
+s2=[43,54,6,7]
+s4=list(map(lambda x,y,z: x+y+z,s,s1,s2))
+print(s4)
+
+[87, 111, 12, 13]
+
+# 22. Write a Python program to listify the list of given strings individually using Python map
+color = ['Red', 'Blue', 'Black', 'White', 'Pink'] 
+
+result = list(map(list, color)) 
+print(result)
+
+[['R', 'e', 'd'], ['B', 'l', 'u', 'e'], ['B', 'l', 'a', 'c', 'k'], ['W', 'h', 'i', 't', 'e'], ['P', 'i', 'n', 'k']]
+
+color = ['Red', 'Blue', 'Black', 'White', 'Pink'] 
+for i in color:
+    for j in (i):
+        s=list(j)
+        print(s,end=' ')
+
+['R'] ['e'] ['d'] ['B'] ['l'] ['u'] ['e'] ['B'] ['l'] ['a'] ['c'] ['k'] ['W'] ['h'] ['i'] ['t'] ['e'] ['P'] ['i'] ['n'] ['k'] 
+
+# 23. Write a Python program to square the elements of a list using map() function
+s=[12,3,45,33]
+for i in s:
+    print(i**2)
+
+144
+9
+2025
+1089
+
+var=list(map(lambda x: x**2,s))
+print(var)
+
+[144, 9, 2025, 1089]
+
+# 24. Write a Python program to add two given lists and find the difference between lists.
+# Use map() function
+s=[12,3,4,66]
+s1=[98,54,3,22]
+v=list(map(lambda x,y: x+y,s,s1))
+v1=list(map(lambda x,y: x-y,s,s1))
+
+print(v)
+print(v1)
+
+[110, 57, 7, 88]
+[-86, -51, 1, 44]
+
+# 25. Write a Python program to convert a given list of integers and a tuple of integers in a
+# list of strings
+
+s=[(12,3,4),(66,7,8),(90,1,3)]
+s1=list(map(str,s))
+print(s1)
+
+['(12, 3, 4)', '(66, 7, 8)', '(90, 1, 3)']
+
+# 26. Write a Python program to compute the sum of elements of an given array of
+# integers, use map() function
+s=[12,3,4,56,999]
+# print(list(map(sum,s)))
+# print(s1)
+from functools import reduce
+s2=reduce(lambda x,y:x+y,s)
+print(s2)
+print('*'*10)
+sum(s)
+
+
+##########sum and map???????????
+
+
+
+    
+
+1074
+**********
+
+1074
+
+# 27. Write a Python program to count the same pair in two given lists. use map() function
+s=[1,2,65,78,90]
+s1=[2,65,8,90,5]
+for i in s:
+    for j  in s1:
+        if i==j:
+            print(i)
+            
+print('*'*20)
+
+def common():
+    for i in s:
+        for j  in s1:
+            if i==j:
+                print(i,end=' ')
+                return i
+                
+
+
+
+            
+        
+
+2
+65
+90
+********************
+
+s2=map(common,s,s1)
+print(s2)
+s2
+# ??????????????????????
+
+<map object at 0x000002780B52A5E0>
+
+<map at 0x2780b52a5e0>
+
+# 28. Write a Python program to convert a given list of strings into list of lists using map
+# function
+
+s=['sagar','chetak','ritesh']
+for i in s:
+    for j in i:
+        pass
+    
+    
+    print(list(i))
+
+print(list(map(list,s)))
+print(tuple(map(list,s)))
+print(list(map(tuple,s)))
+print(str(map(list,s)))
+print(list(map(str,s)))
+
+['s', 'a', 'g', 'a', 'r']
+['c', 'h', 'e', 't', 'a', 'k']
+['r', 'i', 't', 'e', 's', 'h']
+[['s', 'a', 'g', 'a', 'r'], ['c', 'h', 'e', 't', 'a', 'k'], ['r', 'i', 't', 'e', 's', 'h']]
+(['s', 'a', 'g', 'a', 'r'], ['c', 'h', 'e', 't', 'a', 'k'], ['r', 'i', 't', 'e', 's', 'h'])
+[('s', 'a', 'g', 'a', 'r'), ('c', 'h', 'e', 't', 'a', 'k'), ('r', 'i', 't', 'e', 's', 'h')]
+<map object at 0x000002780B52A550>
+['sagar', 'chetak', 'ritesh']
+
+def l():
+    s=['sagar','chetak','ritesh']
+    for i in s:
+        for j in i:
+            pass
+    
+    
+        print(list(i))
+        
+        
+v=map(l,s)
+print(v)
+
+<map object at 0x000002780B52A790>
+
+# 29. Write a Python program to convert a given list of tuples to a list of strings using map
+# function
+
+s=[(12,3,4),(32,54,5),(78,9,89)]
+print(tuple(map(str,s)))
+
+('(12, 3, 4)', '(32, 54, 5)', '(78, 9, 89)')
+
+# 30. Python program to find the diff. between two lists using filter() function
+l=[12,3,4,56]
+l1=[12,7,43,11]
+# print(list(filter(lambda x,y : x-y ,l,l1)))
+# 
+print(list(map(lambda a,b : a-b, l,l1)))
+
+[0, -4, -39, 45]
+
+# 31. Python program to remove stop words from string using filter() function
+from nltk.corpus import stopwords
+nltk.download('stopwords')
+from nltk.tokenize import word_tokenize
+text='chetak like to play cricket'
+text_tokens=words_tokenize(text)
+tokens_without_sw=[word for word in text_tokens if not word in stopwords.words()]
+print(tokens_without_sw)
+
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+~\AppData\Local\Temp/ipykernel_15788/42171540.py in <module>
+      1 # 31. Python program to remove stop words from string using filter() function
+      2 from nltk.corpus import stopwords
+----> 3 nltk.download('stopwords')
+      4 from nltk.tokenize import word_tokenize
+      5 text='chetak like to play cricket'
+
+NameError: name 'nltk' is not defined
+
+# 32. Python program to find common items in two arrays using lambda and filter() function
+s=[12,3,45,33]
+s1=[32,52,6,7]
+s2=list(filter(lambda x: x in s,s1))
+s2
+
+[]
+
+# 33. Python program to filter odd numbers from the list using filter() function
+s=[12,3,55,7,7,8,9,99,24,6,98]
+odd_list = list(filter(lambda no : no%2 != 0 ,s))
+print(odd_list)
+
+[3, 55, 7, 7, 9, 99]
+
+# 34. Python program to filter even numbers from the list using filter() function
+s=[12,3,55,7,7,8,9,99,24,6,98]
+even_list = list(filter(lambda no : no%2 == 0 ,s))
+print(even_list)
+
+[12, 8, 24, 6, 98]
+
+# 35. Python program that filters non-vowels from the list using filter() function
+s=['chetak madansingdeore pm']
+nonow = list(filter(lambda x : x.replace('a',''),s))
+print(nonow)
+
+['chetak madansingdeore pm']
+
+def f(v):
+    l='a','e','i','o','u'
+    if v in l:
+        return l
+    
+    
+s='chetak madansingdeore pm'
+
+filtered=filter(f,s)
+for i in filtered:
+    print(i)
+
+e
+a
+a
+a
+i
+e
+o
+e
+
+ 
+
