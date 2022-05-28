@@ -1,0 +1,102 @@
+                         ***************STRING METHODS****************
+********************************************************************************************************       
+suppose string=s
+
+1.  s.capitalize() .....> convert only first character of statement capital.
+
+​
+
+2.  s.upper() ..........> convert all characters of statement capital/upper.
+
+    s.isupper() ........> return true when all character in upper case.
+
+​
+
+3.  s.lower() ..........> convert all characters of statement small/lower.
+
+    s.isower() .........> return true if all charater of statement in lower case.
+
+​
+
+4.  s.casefold()........> similar to lower but it is more stronger and aggresive.
+
+                          eg. in germen,US. like germen lowercase letter 'ß' which gives o/p as 'ss'.
+
+    
+
+5.  s.title() ..........>capitalize first chs of each word.
+
+    s.istitle() ........>return true when first letter of each word is capital.
+
+​
+
+6.  s.strip()...........>remove all white spaces from starting & ending.
+
+    s.lstrip()..........>remove all starting/leading white spaces(blank spaces).
+
+    s.rstrip()..........>remove all ending/trailing white spaces.
+
+​
+
+9.  s.swapcase()........>it will invert case for all characters./(lower to upper & upper to lower).
+
+​
+
+10. s.replace().........>replace old string by new string.
+
+                         syntax:- s.replace(old string,new string,[count])
+
+        
+
+11. s.count(substring,[start index],[end index])...>it will count how many times the substring appeared in whole string 
+
+                                                    #(start and end index are optional)
+
+    
+
+12. s.index(substring,[start index],[end index])...> it will return index position of substring in whole string.
+
+                                                    #(start and end index are optional)
+
+13. s.find(substring,[start index],[end index]) ...>same as s.index() 
+
+                                                    # but it will return -1 if index not found in string.
+
+                                                    #(start and end index are optional)
+
+14. s.isalnum() .......>return true when only aplha+numeric without spaces are available.
+
+15. s.isalpha() .......>return true when only alpha without spaces available.(atoz)
+
+​
+
+16. s.isspace() .......>return true when spaces are available.
+
+​
+
+17. s.isdecimal() .....>return true when only digits are present.#(special char,.,space not allowed for true)
+
+18. s.isdigit() .......>return true when digits are present.#(digit,subscript,superscript allowed for true)#unicode
+
+19. s.isnumeric()......>return true when digits are present.#(digit,subscript,superscript,fraction allowed for true)
+
+​
+
+20. s.zfill([count]) .......>until it reached to specified count length it will add 0 at begining of string
+
+​
+
+21. s.centre(len,char) .....>white spaces by default
+
+​
+
+22. s.spilt(seperator,maxspilt)..........> it will convert our string to list
+
+23. s.join(character.join(list)).........> it will convert our list to string.
+
+​
+
+​
+
+​
+
